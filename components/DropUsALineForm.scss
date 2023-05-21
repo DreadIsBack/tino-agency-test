@@ -1,0 +1,63 @@
+@import '@/styles/variables';
+
+.main__form {
+  padding: 48px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #fff;
+  box-shadow: 0px 80px 120px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+
+    input[type='text'] {
+      width: 100%;
+    }
+  }
+
+  label {
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+
+  &__message-field {
+    height: 134px;
+  }
+
+  &__subtitle {
+    margin-top: 40px;
+
+    text-align: center;
+
+    color: #6b717b;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+
+    a {
+      color: $color-dark-blue;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  &__send {
+    margin-top: 30px;
+    padding: 16px;
+
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    background: #6db353;
+    border-radius: 28px;
+  }
+}

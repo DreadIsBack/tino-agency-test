@@ -1,0 +1,55 @@
+@import '@/styles/variables';
+
+.dropdown {
+  position: relative;
+
+  &__value {
+    $icon-offset: 20px;
+    $icon-size: 16px;
+
+    padding: 16px (16px + $icon-offset + $icon-size) 16px 16px;
+
+    background: #fff no-repeat;
+    background-image: url('/img/icon-arrow-down.svg');
+    background-position: calc(100% - $icon-offset);
+
+    border: 1px solid $color-grey-400;
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    &--opened {
+      background-image: url('/img/icon-arrow-up.svg');
+    }
+  }
+
+  &__panel {
+    margin-top: 8px;
+
+    position: absolute;
+
+    background: #fff;
+    box-shadow: 0px 24px 40px rgba(21, 26, 37, 0.1);
+    border-radius: 8px;
+
+    &__option {
+      $icon-offset: 16px;
+      $icon-size: 16px;
+
+      padding: 16px (16px + $icon-offset + $icon-size) 16px 16px;
+
+      background: #fff;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #f6f9fc;
+      }
+
+      &--selected {
+        background-image: url('/img/icon-check.svg');
+        background-repeat: no-repeat;
+        background-position: calc(100% - $icon-offset);
+      }
+    }
+  }
+}

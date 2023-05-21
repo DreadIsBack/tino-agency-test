@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'fonts';
+@import 'variables';
+
+body {
+  color: $color-dark-blue;
+  font-family: 'Basier Circle';
+
+  background: #fff url('/img/bg.svg') no-repeat top / cover;
+}
+
+h1 {
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 72px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+input[type='text'],
+input[type='email'] {
+  padding: 16px;
+
+  background: #fff;
+  border: 1px solid $color-grey-200;
+  border-radius: 8px;
+}
+
+select {
+  padding: 16px;
+
+  background: #fff;
+  border: 1px solid $color-grey-400;
+  border-radius: 8px;
+
+  appearance: none;
+  cursor: pointer;
+
+  option {
+    padding: 16px 14px;
+
+    display: block;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    cursor: pointer;
+  }
+}
+
+textarea {
+  padding: 16px;
+
+  background: #fff;
+  border: 1px solid $color-grey-200;
+  border-radius: 8px;
+}
+
+.wrap {
+  margin: 0 auto;
+  max-width: 1170px;
+
+  &__margin {
+    margin: 0 20px;
+  }
+}
+
+.header {
+  margin-top: 28px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    margin-right: auto;
+
+    display: flex;
+    flex-shrink: 0;
+
+    color: $color-green;
+
+    img {
+      display: inline-block;
+    }
+
+    span {
+      margin-left: 10px;
+
+      display: inline-block;
+
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 44px;
+    }
+  }
+
+  &__item {
+    display: block;
+    padding: 0 36px;
+
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__sign-in {
+    margin-left: auto;
+    padding: 10px 24px;
+
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+
+    color: #fff;
+    font-weight: 500;
+
+    background: $color-dark-blue;
+    border-radius: 28px;
+
+    img {
+      margin-left: 12px;
+      display: inline-block;
+    }
+  }
+
+  @media (max-width: $breakpoint-610) {
+    & {
+      flex-direction: column;
+
+      &__logo {
+        margin: 0;
+      }
+
+      &__item {
+        margin-top: 10px;
+      }
+
+      &__sign-in {
+        margin: 10px 0 0 0;
+      }
+    }
+  }
+}
+
+.main {
+  margin-top: 120px;
+
+  display: grid;
+  grid-template-columns: 1fr 570px;
+  gap: 80px;
+
+  h1 + p {
+    margin-top: 24px;
+  }
+
+  &__cards {
+    margin-top: 80px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  @media (max-width: $breakpoint-1200) {
+    & {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+}
+
+.footer {
+  height: 200px;
+}
