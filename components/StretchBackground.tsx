@@ -1,4 +1,6 @@
-import { useEffect, useLayoutEffect, useState } from 'react';
+'use client';
+
+import { useEffect, useState } from 'react';
 import './StretchBackground.scss';
 
 interface Props {
@@ -6,11 +8,7 @@ interface Props {
 }
 
 function calcScaleX(imageWidth: number): number {
-  if (typeof window !== 'undefined') {
-    return document.body.clientWidth / imageWidth;
-  } else {
-    return 1;
-  }
+  return document.body.clientWidth / imageWidth;
 }
 
 export default function StretchBackground(props: Props) {
@@ -19,7 +17,7 @@ export default function StretchBackground(props: Props) {
   useEffect(() => {
     const interval = setInterval(() => {
       setScaleX(calcScaleX(props.imageWidth));
-    }, 200);
+    }, 100);
 
     return () => clearInterval(interval);
   }, [props]);
