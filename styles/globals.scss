@@ -97,7 +97,7 @@ textarea {
 
     @for $i from 1 through 5 {
       &:nth-child(#{$i}) {
-        left: 120px + 300 * ($i - 1);
+        left: calc(50% + (300px * ($i - 3)));
       }
     }
   }
