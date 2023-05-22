@@ -3,10 +3,12 @@
 import Image from 'next/image';
 import DropUsALineForm from '@/components/DropUsALineForm';
 import Card from '@/components/Card';
+import StretchBackground from '@/components/StretchBackground';
 
 export default function Home() {
   return (
     <div className="wrap">
+      <StretchBackground imageWidth={1440} />
       <div className="background-lines">
         <div></div>
         <div></div>
