@@ -8,7 +8,8 @@ body {
   color: $color-dark-blue;
   font-family: 'Basier Circle';
 
-  background: #fff url('/img/bg.svg') no-repeat top / cover;
+  background: #fff url('/img/bg.svg') no-repeat top;
+  background-size: 100% auto;
 }
 
 h1 {
