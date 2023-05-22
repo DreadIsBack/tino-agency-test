@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import DropUsALineForm from '@/components/DropUsALineForm';
 import Card from '@/components/Card';

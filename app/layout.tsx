@@ -1,5 +1,3 @@
-'use client';
-
 import '@/styles/globals.scss';
 
 export const metadata = {
