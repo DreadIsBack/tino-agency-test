@@ -27,8 +27,8 @@ export default function Home() {
             </Card>
           </div>
         </div>
+        <DropUsALineForm />
       </main>
-      <DropUsALineForm />
     </NoSSR>
   );
 }
