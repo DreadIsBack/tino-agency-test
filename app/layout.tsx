@@ -1,4 +1,7 @@
+import Image from 'next/image';
+import StretchBackground from '@/components/StretchBackground';
 import '@/styles/globals.scss';
+import './layout.scss';
 
 export const metadata = {
   title: 'Create Next App',
@@ -8,7 +11,39 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="wrap">
+          <StretchBackground imageWidth={1440} />
+          <div className="background-lines">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+          <header className="header">
+            <a className="header__logo" href="#">
+              <Image src="/img/logo.svg" width={39} height={31} alt="Logo" />
+              <span>Sparrow</span>
+            </a>
+            <a className="header__item" href="#">
+              Products
+            </a>
+            <a className="header__item" href="#">
+              Company
+            </a>
+            <button className="header__sign-in">
+              Sign In
+              <Image src="/img/icon-arrow-right.svg" width={16} height={16} alt="Arrow right" />
+            </button>
+          </header>
+
+          {children}
+
+          <footer className="footer"></footer>
+        </div>
+      </body>
     </html>
   );
 }

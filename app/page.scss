@@ -1,0 +1,26 @@
+.main {
+  margin-top: 120px;
+
+  display: grid;
+  grid-template-columns: 1fr 570px;
+  gap: 80px;
+
+  h1 + p {
+    margin-top: 24px;
+  }
+
+  &__cards {
+    margin-top: 80px;
+
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 40px;
+  }
+
+  @media (max-width: $breakpoint-1200) {
+    & {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  }
+}
