@@ -1,4 +1,3 @@
-import StretchBackground from '@/components/StretchBackground';
 import Header from '@/components/Header';
 import '@/styles/globals.scss';
 import './layout.scss';
@@ -14,17 +13,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <div className="wrap">
-          <StretchBackground imageWidth={1440} />
-          <div className="background-lines">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-          <ScrollUp />
+        <img className="background-img" src="/img/bg.svg" alt="Background image" />
+        <div className="background-lines">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ScrollUp />
 
+        <div className="wrap">
           <Header />
 
           {children}

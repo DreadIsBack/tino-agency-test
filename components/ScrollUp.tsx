@@ -24,10 +24,12 @@ export default function ScrollUp() {
   }
 
   return (
-    isShow && (
-      <button className="scrollup" onClick={scrollUp}>
-        <Image src="/img/icon-arrow-up.svg" width={24} height={24} alt="Arrow up icon" />
-      </button>
-    )
+    <>
+      {isShow && (
+        <button className="scrollup" onClick={scrollUp}>
+          <Image src="/img/icon-arrow-up.svg" width={24} height={24} alt="Arrow up icon" />
+        </button>
+      )}
+    </>
   );
 }
