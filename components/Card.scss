@@ -1,3 +1,5 @@
+@import '@/styles/variables';
+
 .card {
   position: relative;
 
@@ -25,7 +27,7 @@
   &__text {
     margin-top: 7px;
 
-    color: #6b717b;
+    color: $color-grey-600;
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
