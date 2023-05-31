@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import '@/styles/globals.scss';
 import './layout.scss';
 import Footer from '@/components/Footer';
+import ScrollUp from '@/components/ScrollUp';
 
 export const metadata = {
   title: 'Create Next App',
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div></div>
             <div></div>
           </div>
+          <ScrollUp />
 
           <Header />
 
