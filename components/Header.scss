@@ -1,0 +1,81 @@
+@import '@/styles/variables';
+
+.header {
+  margin-top: 28px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    margin-right: auto;
+
+    display: flex;
+    flex-shrink: 0;
+
+    color: $color-green;
+
+    img {
+      display: inline-block;
+    }
+
+    span {
+      margin-left: 10px;
+
+      display: inline-block;
+
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 44px;
+    }
+  }
+
+  &__item {
+    display: block;
+    padding: 0 36px;
+
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__sign-in {
+    margin-left: auto;
+    padding: 10px 24px;
+
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+
+    color: #fff;
+    font-weight: 500;
+
+    background: $color-dark-blue;
+    border-radius: 28px;
+
+    img {
+      margin-left: 12px;
+      display: inline-block;
+    }
+  }
+
+  @media (max-width: $breakpoint-610) {
+    & {
+      flex-direction: column;
+
+      &__logo {
+        margin: 0;
+      }
+
+      &__item {
+        margin-top: 10px;
+      }
+
+      &__sign-in {
+        margin: 10px 0 0 0;
+      }
+    }
+  }
+}
